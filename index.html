@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Компьютерные языки и разметка (18 вопросов)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(184, 154, 159);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .test-container {
+            background-color: #e6c3c8;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 700px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #2f373e;
+            margin-bottom: 30px;
+        }
+        .question {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .question p {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .options label:hover {
+            background: #e9ecef;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #96dcb3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #9ee3ba;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            display: none;
+            white-space: pre-line;
+        }
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .warning { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+        .danger { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    </style>
+</head>
+<body>
+
+<div class="test-container">
+    <h1>Итоговый тест по языкам и разметке</h1>
+    
+    <form id="quizForm">
+        <!-- БЛОК 1: HTML & Разметка -->
+        <div class="question">
+            <p>1. Что из перечисленного является языком разметки?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> Python</label>
+                <label><input type="radio" name="q1" value="B"> HTML</label>
+                <label><input type="radio" name="q1" value="C"> C++</label>
+                <label><input type="radio" name="q1" value="D"> Java</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Какой тег используется для создания ссылки в HTML?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> &lt;link&gt;</label>
+                <label><input type="radio" name="q2" value="B"> &lt;href&gt;</label>
+                <label><input type="radio" name="q2" value="C"> &lt;a&gt;</label>
+                <label><input type="radio" name="q2" value="D"> &lt;url&gt;</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Как расшифровывается аббревиатура HTML?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> HighText Marking Language</label>
+                <label><input type="radio" name="q3" value="B"> HyperText Markup Language</label>
+                <label><input type="radio" name="q3" value="C"> HyperTech Multi Language</label>
+                <label><input type="radio" name="q3" value="D"> Home Tool Markup Language</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. Какой тег создает самый крупный заголовок первого уровня?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> &lt;heading&gt;</label>
+                <label><input type="radio" name="q4" value="B"> &lt;h6&gt;</label>
+                <label><input type="radio" name="q4" value="C"> &lt;head&gt;</label>
+                <label><input type="radio" name="q4" value="D"> &lt;h1&gt;</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Какой HTML-атрибут указывает путь к изображению в теге &lt;img&gt;?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> href</label>
+                <label><input type="radio" name="q5" value="B"> src</label>
+                <label><input type="radio" name="q5" value="C"> path</label>
+                <label><input type="radio" name="q5" value="D"> link</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. Какой тег используется для создания маркированного (ненумерованного) списка?</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> &lt;ol&gt;</label>
+                <label><input type="radio" name="q6" value="B"> &lt;list&gt;</label>
+                <label><input type="radio" name="q6" value="C"> &lt;ul&gt;</label>
+                <label><input type="radio" name="q6" value="D"> &lt;li&gt;</label>
+            </div>
+        </div>
+
+        <!-- БЛОК 2: CSS & Стили -->
+        <div class="question">
+            <p>7. Для чего используется язык CSS?</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> Для создания серверной логики</label>
+                <label><input type="radio" name="q7" value="B"> Для управления базами данных</label>
+                <label><input type="radio" name="q7" value="C"> Для описания внешнего вида и стилей веб-страницы</label>
+                <label><input type="radio" name="q7" value="D"> Для написания системных скриптов</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. Какое CSS-свойство меняет цвет текста?</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> font-color</label>
+                <label><input type="radio" name="q8" value="B"> text-color</label>
+                <label><input type="radio" name="q8" value="C"> color</label>
+                <label><input type="radio" name="q8" value="D"> background-color</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>9. Как в CSS выбрать элемент с уникальным идентификатором id="header"?</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> .header</label>
+                <label><input type="radio" name="q9" value="B"> #header</label>
+                <label><input type="radio" name="q9" value="C"> header</label>
+                <label><input type="radio" name="q9" value="D"> *header</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>10. Какое CSS-свойство управляет размером шрифта?</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> font-size</label>
+                <label><input type="radio" name="q10" value="B"> text-style</label>
+                <label><input type="radio" name="q10" value="C"> size</label>
+                <label><input type="radio" name="q10" value="D"> font-weight</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>11. Какой язык является основным для создания интерактивности на стороне клиента (в браузере)?</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="A"> PHP</label>
+                <label><input type="radio" name="q11" value="B"> JavaScript</label>
+                <label><input type="radio" name="q11" value="C"> SQL</label>
+                <label><input type="radio" name="q11" value="D"> Python</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>12.Выберите пример ПРАВИЛЬНОЙ вложенности тегов (где нет ошибок)</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="A">&lt;b&gt; &lt;i&gt;Привет&lt;/b&gt; &lt;/i&gt;</label>
+                <label><input type="radio" name="q12" value="B"> &lt;b&gt; &lt;i&gt;Привет&lt;/i&gt; &lt;/b&gt;</label>
+                <label><input type="radio" name="q12" value="C"> &lt;b&gt;Привет&lt;i&gt;&lt;/i&gt;</label>
+                <label><input type="radio" name="q12" value="D"> &lt;i&gt; &lt;b&gt;Привет&lt;/i&gt; &lt;/b &gt; </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>13. Какое расширение обычно имеет стандартный файл с каскадными таблицами стилей? </p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="A"> .html</label>
+                <label><input type="radio" name="q13" value="B"> .txt</label>
+                <label><input type="radio" name="q13" value="C">.css </label>
+                <label><input type="radio" name="q13" value="D"> .xml </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>14. В чем главное отличие компилируемых языков от интерпретируемых?</p>
+            <div class="options">
+                 <label><input type="radio" name="q14" value="A"> Компилируемые языки переводят код в машинный файл целиком перед запуском, а интерпретируемые выполняют его построчно во время работы</label>
+                <label><input type="radio" name="q14" value="B"> Компилируемые языки способны работать исключительно внутри веб-браузеров
+</label>
+                <label><input type="radio" name="q14" value="C"> Интерпретируемые языки вообще не требуют непосредственного написания исходного кода</label>
+                <label><input type="radio" name="q14" value="D"> Между ними нет никакой разницы, это слова-синонимы</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>15.  Как выглядит правильный синтаксис комментария в HTML, который браузер будет игнорировать?</p>
+            <div class="options">
+                 <label><input type="radio" name="q15" value="A"> // Это комментарий</label>
+                <label><input type="radio" name="q15" value="B"> /* Это комментарий */</label>
+                <label><input type="radio" name="q15" value="C">&lt;!-- Это комментарий --&gt; </label>
+                <label><input type="radio" name="q15" value="D"> # Это комментарий </label>
+
+            </div>
+        </div>
+         <div class="question">
+            <p>16.  Посмотрите на CSS-свойство: margin: 10px 20px 30px;. В каком порядке распределятся эти отступы вокруг элемента?</p>
+            <div class="options">
+                 <label><input type="radio" name="q16" value="A"> Сверху — 10px, слева — 20px, снизу — 30px, а справа отступа не будет.</label>
+                <label><input type="radio" name="q16" value="B"> Сверху — 10px, справа и слева — 20px, снизу — 30px.</label>
+                <label><input type="radio" name="q16" value="C">Сверху, справа и снизу — по 10px, а слева — 30px. </label>
+                <label><input type="radio" name="q16" value="D"> Свойства распределятся по кругу, а последнее значение (30px) просто проигнорируется. </label>
+
+            </div>
+        </div>
+ <div class="question">
+            <p>17. Какое CSS-свойство нужно использовать, чтобы сделать текст внутри элемента жирным?</p>
+            <div class="options">
+                 <label><input type="radio" name="q17" value="A">font-style: bold;</label>
+                <label><input type="radio" name="q17" value="B">text-thickness: heavy;</label>
+                <label><input type="radio" name="q17" value="C">font-weight: bold; </label>
+                <label><input type="radio" name="q17" value="D">text-style: bold; </label>
+
+            </div>
+        </div>
+ <div class="question">
+            <p>18.  На лабораторной по КЯР студент создал XML-файл и написал в нем теги разным регистром: &lt;Data&gt;Текст&lt;/data&gt;. Затем он сделал то же самое в HTML-файле: &lt;p&gt;Текст&lt;/P&gt;. Как отреагируют программы на эти файлы?</p>
+            <div class="options">
+                 <label><input type="radio" name="q18" value="A"> Обе программы (и XML-парсер, и браузер) выдадут ошибку, так как регистр везде должен строго совпадать.</label>
+                <label><input type="radio" name="q18" value="B"> XML-файл выдаст ошибку синтаксиса, а HTML-файл успешно откроется и отобразит текст.</label>
+                <label><input type="radio" name="q18" value="C">XML-файл откроется без проблем, а HTML-файл выдаст ошибку и покажет пустой экран. </label>
+                <label><input type="radio" name="q18" value="D"> Оба файла откроются корректно, потому что современные стандарты разметки полностью игнорируют регистр букв. </label>
+
+            </div>
+        </div>
+
+
+                <button type="button" onclick="checkAnswers()">Проверить результаты</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function checkAnswers() {
+        // Ключ правильных ответов для 18 вопросов
+        const correctAnswers = {
+            q1: 'B', q2: 'C', q3: 'B', q4: 'D', q5: 'B',
+            q6: 'C', q7: 'C', q8: 'C', q9: 'B', q10: 'A',
+            q11: 'B', q12: 'B', q13: 'C', q14: 'A', q15: 'C',
+            q16: 'B', q17: 'C', q18: 'B'
+        };
+ const correctText = {
+            q1: 'HTML', q2: '<a>', q3: 'HyperText Markup Language', q4: '<h1>', q5: 'src',
+            q6: '<ul>', q7: 'Для описания внешнего вида и стилей веб-страницы', q8: 'color', q9: '#header', q10: 'font-size',
+            q11: 'JavaScript', q12: '<b><i>Привет</i></b>', q13: '.css ', 
+            q14: 'Компилируемые языки переводят код в машинный файл целиком перед запуском, а интерпретируемые выполняют его построчно во время работы', 
+            q15: '<!-- Это комментарий -->', q16: 'true (истина)', q17: 'font-weight: bold;', 
+            q18: 'XML-файл выдаст ошибку синтаксиса, а HTML-файл успешно откроется и отобразит текст.'
+        };
+
+         let score = 0;
+        const totalQuestions = Object.keys(correctAnswers).length;
+        const form = document.getElementById('quizForm');
+        let allAnswered = true;
+        
+        // Валидация: заполнены ли все ответы
+        for (let key in correctAnswers) {
+            if (form.elements[key].value === "") {
+                allAnswered = false;
+                break;
+            }
+        }
+
+        if (!allAnswered) {
+            alert("Пожалуйста, ответьте на все 18 вопросов перед проверкой!");
+            return;
+        }
+
+        // Очистка старых подсказок перед новой проверкой (если они были)
+        const oldHints = document.querySelectorAll('.correct-hint');
+        oldHints.forEach(hint => hint.remove());
+
+        // Подсчет итогового балла и визуальная подсветка вопросов
+        const questionsDivs = document.querySelectorAll('.question');
+        let index = 0;
+
+        for (let key in correctAnswers) {
+            const userAnswer = form.elements[key].value;
+            const currentQuestionDiv = questionsDivs[index];
+
+            if (userAnswer === correctAnswers[key]) {
+                score++;
+                currentQuestionDiv.style.backgroundColor = '#e2f0d9'; // Светло-зеленый фон
+                currentQuestionDiv.style.padding = '15px';
+                currentQuestionDiv.style.borderRadius = '6px';
+            } else {
+                currentQuestionDiv.style.backgroundColor = '#fce4d6'; // Светло-красный фон
+                currentQuestionDiv.style.padding = '15px';
+                currentQuestionDiv.style.borderRadius = '6px';
+
+                // Добавляем текстовую подсказку с правильным ответом
+                const hint = document.createElement('p');
+                hint.className = 'correct-hint';
+                hint.innerText = `❌ Неверно. Правильный ответ: ${correctText[key]}`;
+                currentQuestionDiv.appendChild(hint);
+            }
+            index++;
+        }
+
+        // Расчет процента выполнения
+        const percentage = (score / totalQuestions) * 100;
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        
+        let resultText = `Вы правильно ответили на ${score} из ${totalQuestions} вопросов.\n`;
+        let grade = 1;
+
+        // Выставление итоговой оценки по 10-балльной системе
+        if (percentage === 100) {
+            grade = 10; resultDiv.className = 'success';
+        } else if (percentage >= 90) {
+            grade = 9; resultDiv.className = 'success';
+        } else if (percentage >= 80) {
+            grade = 8; resultDiv.className = 'success';
+        } else if (percentage >= 70) {
+            grade = 7; resultDiv.className = 'warning';
+        } else if (percentage >= 60) {
+            grade = 6; resultDiv.className = 'warning';
+        } else if (percentage >= 50) {
+            grade = 5; resultDiv.className = 'warning';
+        } else if (percentage >= 40) {
+            grade = 4; resultDiv.className = 'danger';
+        } else if (percentage >= 30) {
+            grade = 3; resultDiv.className = 'danger';
+        } else if (percentage >= 20) {
+            grade = 2; resultDiv.className = 'danger';
+        } else {
+            grade = 1; resultDiv.className = 'danger';
+        }
+        
+        resultText += `Итоговая оценка: ${grade} из 10`;
+        resultDiv.innerText = resultText;
+        
+        // Автоматический плавный скролл к блоку с оценкой
+        resultDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
